@@ -26,6 +26,8 @@ jobs:
         else
           echo "Nope!"; exit 1
         fi
+    - store_test_results:
+    path: test-results
 workflows:
   version: 2
   one_and_two:
@@ -34,3 +36,5 @@ workflows:
     - two:
         requires:
         - one
+        
+
